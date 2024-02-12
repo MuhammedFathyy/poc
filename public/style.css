@@ -1,0 +1,991 @@
+.input {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  width: 420px;
+  color: red;
+}
+
+.input .class {
+  background-image: url(../../static/img/placeholder-22.svg) !important;
+}
+
+.input .inputs-leading-items-instance {
+  background-image: url(../../static/img/placeholder-19.svg) !important;
+}
+
+.input .title-value {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+}
+
+.input .title-container {
+  align-items: baseline;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 2px;
+  position: relative;
+  width: 100%;
+}
+
+.input .title {
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.input .text-wrapper {
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.input .value-container {
+  align-self: stretch;
+  position: relative;
+  width: 100%;
+}
+
+.input .value {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+  margin-top: -1px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+}
+
+.input .key {
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.input .seprator {
+  color: var(--zinc-300);
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.input .div {
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.input .value-2 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+  margin-top: -1px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  width: fit-content;
+}
+
+.input .class-2 {
+  background-image: url(../../static/img/calendar-due-1.svg) !important;
+}
+
+.input .class-3 {
+  background-image: url(../../static/img/calendar-due.svg) !important;
+}
+
+.input .inputs-trailing-items {
+  background-image: url(../../static/img/eye.svg) !important;
+}
+
+.input .class-4 {
+  background-image: url(../../static/img/eye-1.svg) !important;
+}
+
+.input .chevron-down {
+  height: 24px !important;
+  position: relative !important;
+  width: 24px !important;
+}
+
+.input .div-2 {
+  align-items: center;
+  background-color: var(--white);
+  border: 2px solid;
+  border-color: var(--red-500);
+  border-radius: 12px;
+  display: flex;
+  gap: 8px;
+  height: 56px;
+  overflow: hidden;
+  position: relative;
+}
+
+.input .title-value-2 {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+}
+
+.input .password-2 {
+  color: var(--zinc-600);
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.input .text-wrapper-2 {
+  color: var(--zinc-400);
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.input .value-container-2 {
+  align-items: baseline;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  position: relative;
+  width: 100%;
+}
+
+.input .value-3 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  color: var(--zinc-700);
+  display: -webkit-box;
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+  margin-top: -1px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+}
+
+.input .key-2 {
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.input .value-4 {
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.input .value-5 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  color: var(--zinc-700);
+  display: -webkit-box;
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+  margin-top: -1px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  width: fit-content;
+}
+
+.input .helper-wrapper {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  justify-content: center;
+  padding: 0px 0px 0px 12px;
+  position: relative;
+  width: 100%;
+}
+
+.input .element-helper {
+  color: var(--red-500);
+  flex: 1;
+  font-family: var(--text-text-sm-regular-font-family);
+  font-size: var(--text-text-sm-regular-font-size);
+  font-style: var(--text-text-sm-regular-font-style);
+  font-weight: var(--text-text-sm-regular-font-weight);
+  letter-spacing: var(--text-text-sm-regular-letter-spacing);
+  line-height: var(--text-text-sm-regular-line-height);
+  margin-top: -1px;
+  position: relative;
+}
+
+.input.active {
+  align-items: center;
+  background-color: var(--white);
+  border: 2px solid;
+  border-radius: 12px;
+  box-shadow: var(--active-outline-color);
+  height: 56px;
+  overflow: hidden;
+  padding: 0px 16px;
+}
+
+.input.disabled-true {
+  border-color: var(--zinc-100);
+}
+
+.input.default {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 12px;
+  height: 56px;
+  overflow: hidden;
+  padding: 0px 16px;
+}
+
+.input.error-while-static {
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input.filled {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 12px;
+  height: 56px;
+  overflow: hidden;
+  padding: 0px 16px;
+}
+
+.input.error-while-filled {
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input.active.disabled-false {
+  border-color: var(--teal550-brand);
+}
+
+.input.disabled-false.filled {
+  background-color: var(--white);
+  border-color: var(--gray-100);
+}
+
+.input.default.disabled-true {
+  background-color: var(--zinc-50);
+}
+
+.input.error-while-static.disabled-true {
+  background-color: var(--zinc-50);
+}
+
+.input.default.disabled-false {
+  background-color: var(--white);
+  border-color: var(--gray-100);
+}
+
+.input.filled.disabled-true {
+  background-color: var(--zinc-50);
+}
+
+.input.error-while-filled.disabled-true {
+  background-color: var(--zinc-50);
+}
+
+.input .date-picker {
+  align-items: baseline;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 4px;
+}
+
+.input .URL {
+  align-items: baseline;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 4px;
+}
+
+.input .password {
+  align-items: baseline;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 4px;
+}
+
+.input .generic {
+  align-items: baseline;
+  display: flex;
+  gap: 4px;
+}
+
+.input .local-phone-number {
+  align-items: baseline;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 4px;
+}
+
+.input .state-2-filled {
+  align-items: baseline;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 4px;
+}
+
+.input .with-dynamic-text.state-2-active {
+  height: 17px;
+}
+
+.input .generic.state-2-active {
+  height: 17px;
+}
+
+.input .drop-down-menu.state-2-active {
+  height: 17px;
+}
+
+.input .type-drop-down-menu {
+  flex: 1;
+}
+
+.input .type-password {
+  width: fit-content;
+}
+
+.input .type-generic {
+  flex: 1;
+}
+
+.input .disabled-2-true {
+  color: var(--zinc-300);
+}
+
+.input .disabled-2-false {
+  color: var(--zinc-700);
+}
+
+.input .type-0-date-picker {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input .type-0-with-dynamic-text {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input .disabled-3-true {
+  color: var(--zinc-300);
+}
+
+.input .disabled-3-false.type-0-date-picker {
+  color: var(--zinc-700);
+}
+
+.input .type-0-URL.disabled-3-false {
+  color: var(--zinc-400);
+}
+
+.input .type-0-password.disabled-3-false {
+  color: var(--zinc-400);
+}
+
+.input .type-0-local-phone-number.disabled-3-false {
+  color: var(--zinc-400);
+}
+
+.input .type-0-with-dynamic-text.disabled-3-false {
+  color: var(--zinc-700);
+}
+
+.input .type-0-generic.disabled-3-false {
+  color: var(--zinc-400);
+}
+
+.input .type-0-drop-down-menu.disabled-3-false {
+  color: var(--zinc-400);
+}
+
+.input .type-1-drop-down-menu {
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+}
+
+.input .type-1-date-picker {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input .type-1-URL {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input .type-1-password {
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+}
+
+.input .type-1-generic {
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+}
+
+.input .type-1-with-dynamic-text {
+  font-family: var(--text-text-sm-regular-font-family);
+  font-size: var(--text-text-sm-regular-font-size);
+  font-style: var(--text-text-sm-regular-font-style);
+  font-weight: var(--text-text-sm-regular-font-weight);
+  letter-spacing: var(--text-text-sm-regular-letter-spacing);
+  line-height: var(--text-text-sm-regular-line-height);
+}
+
+.input .disabled-4-true {
+  color: var(--zinc-300);
+}
+
+.input .type-1-local-phone-number {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input .disabled-4-false.type-1-date-picker {
+  color: var(--zinc-700);
+}
+
+.input .type-1-URL.disabled-4-false {
+  color: var(--zinc-700);
+}
+
+.input .type-1-password.disabled-4-false {
+  color: var(--zinc-700);
+}
+
+.input .type-1-local-phone-number.disabled-4-false {
+  color: var(--zinc-700);
+}
+
+.input .type-1-with-dynamic-text.disabled-4-false {
+  color: var(--zinc-500);
+}
+
+.input .type-1-generic.disabled-4-false {
+  color: var(--zinc-700);
+}
+
+.input .type-1-drop-down-menu.disabled-4-false {
+  color: var(--zinc-700);
+}
+
+.input .state-3-active {
+  padding: 0px 16px;
+  width: 100%;
+}
+
+.input .type-2-date-picker {
+  align-self: stretch;
+  padding: 0px 16px;
+  width: 100%;
+}
+
+.input .type-2-URL {
+  align-self: stretch;
+  padding: 0px 16px;
+  width: 100%;
+}
+
+.input .type-2-password {
+  align-self: stretch;
+  padding: 0px 16px;
+  width: 100%;
+}
+
+.input .type-2-generic {
+  align-self: stretch;
+  padding: 0px 16px;
+  width: 100%;
+}
+
+.input .type-2-with-dynamic-text {
+  align-self: stretch;
+  padding: 0px 16px;
+  width: 100%;
+}
+
+.input .state-3-default {
+  padding: 0px 16px;
+  width: 100%;
+}
+
+.input .type-2-local-phone-number {
+  align-self: stretch;
+  padding: 0px 16px;
+  width: 100%;
+}
+
+.input .state-3-error-while-static {
+  align-self: stretch;
+  padding: 0px 16px;
+  width: 100%;
+}
+
+.input .state-3-filled {
+  padding: 0px 16px;
+  width: 100%;
+}
+
+.input .type-2-drop-down-menu.state-3-error-while-filled {
+  padding: 0px 17px;
+  width: 420px;
+}
+
+.input.active .title-value {
+  align-self: stretch;
+  gap: 4px;
+  justify-content: center;
+}
+
+.input.filled .title-value {
+  align-self: stretch;
+  gap: 4px;
+  justify-content: center;
+}
+
+.input.active .title {
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+}
+
+.input.disabled-true .title {
+  color: var(--zinc-300);
+}
+
+.input.default .title {
+  font-family: var(--text-text-md-semibold-font-family);
+  font-size: var(--text-text-md-semibold-font-size);
+  font-style: var(--text-text-md-semibold-font-style);
+  font-weight: var(--text-text-md-semibold-font-weight);
+  letter-spacing: var(--text-text-md-semibold-letter-spacing);
+  line-height: var(--text-text-md-semibold-line-height);
+  white-space: nowrap;
+}
+
+.input.disabled-false .title {
+  color: var(--zinc-600);
+}
+
+.input.error-while-static .title {
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+}
+
+.input.filled .title {
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+}
+
+.input.error-while-filled .title {
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+}
+
+.input.active .text-wrapper {
+  font-family: var(--text-text-sm-regular-font-family);
+  font-size: var(--text-text-sm-regular-font-size);
+  font-style: var(--text-text-sm-regular-font-style);
+  font-weight: var(--text-text-sm-regular-font-weight);
+  letter-spacing: var(--text-text-sm-regular-letter-spacing);
+  line-height: var(--text-text-sm-regular-line-height);
+}
+
+.input.disabled-true .text-wrapper {
+  color: var(--zinc-300);
+}
+
+.input.default .text-wrapper {
+  font-family: var(--text-text-md-regular-font-family);
+  font-size: var(--text-text-md-regular-font-size);
+  font-style: var(--text-text-md-regular-font-style);
+  font-weight: var(--text-text-md-regular-font-weight);
+  letter-spacing: var(--text-text-md-regular-letter-spacing);
+  line-height: var(--text-text-md-regular-line-height);
+  white-space: nowrap;
+}
+
+.input.disabled-false .text-wrapper {
+  color: var(--zinc-400);
+}
+
+.input.error-while-static .text-wrapper {
+  font-family: var(--text-text-sm-regular-font-family);
+  font-size: var(--text-text-sm-regular-font-size);
+  font-style: var(--text-text-sm-regular-font-style);
+  font-weight: var(--text-text-sm-regular-font-weight);
+  letter-spacing: var(--text-text-sm-regular-letter-spacing);
+  line-height: var(--text-text-sm-regular-line-height);
+}
+
+.input.filled .text-wrapper {
+  font-family: var(--text-text-sm-regular-font-family);
+  font-size: var(--text-text-sm-regular-font-size);
+  font-style: var(--text-text-sm-regular-font-style);
+  font-weight: var(--text-text-sm-regular-font-weight);
+  letter-spacing: var(--text-text-sm-regular-letter-spacing);
+  line-height: var(--text-text-sm-regular-line-height);
+}
+
+.input.error-while-filled .text-wrapper {
+  font-family: var(--text-text-sm-regular-font-family);
+  font-size: var(--text-text-sm-regular-font-size);
+  font-style: var(--text-text-sm-regular-font-style);
+  font-weight: var(--text-text-sm-regular-font-weight);
+  letter-spacing: var(--text-text-sm-regular-letter-spacing);
+  line-height: var(--text-text-sm-regular-line-height);
+}
+
+.input.disabled-false .value-2 {
+  color: var(--zinc-700);
+}
+
+.input.disabled-true .value-2 {
+  color: var(--zinc-300);
+}
+
+.input .div-2.state-3-error-while-filled .title-value-2 {
+  align-self: stretch;
+  gap: 4px;
+  justify-content: center;
+}
+
+.input .div-2.state-3-active .password-2 {
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+}
+
+.input .div-2.state-3-default .password-2 {
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+}
+
+.input .div-2.state-3-error-while-static .password-2 {
+  font-family: var(--text-text-md-semibold-font-family);
+  font-size: var(--text-text-md-semibold-font-size);
+  font-style: var(--text-text-md-semibold-font-style);
+  font-weight: var(--text-text-md-semibold-font-weight);
+  letter-spacing: var(--text-text-md-semibold-letter-spacing);
+  line-height: var(--text-text-md-semibold-line-height);
+  white-space: nowrap;
+}
+
+.input .div-2.state-3-filled .password-2 {
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+}
+
+.input .div-2.state-3-error-while-filled .password-2 {
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+}
+
+.input .div-2.state-3-active .text-wrapper-2 {
+  font-family: var(--text-text-sm-regular-font-family);
+  font-size: var(--text-text-sm-regular-font-size);
+  font-style: var(--text-text-sm-regular-font-style);
+  font-weight: var(--text-text-sm-regular-font-weight);
+  letter-spacing: var(--text-text-sm-regular-letter-spacing);
+  line-height: var(--text-text-sm-regular-line-height);
+}
+
+.input .div-2.state-3-default .text-wrapper-2 {
+  font-family: var(--text-text-sm-regular-font-family);
+  font-size: var(--text-text-sm-regular-font-size);
+  font-style: var(--text-text-sm-regular-font-style);
+  font-weight: var(--text-text-sm-regular-font-weight);
+  letter-spacing: var(--text-text-sm-regular-letter-spacing);
+  line-height: var(--text-text-sm-regular-line-height);
+}
+
+.input .div-2.state-3-error-while-static .text-wrapper-2 {
+  font-family: var(--text-text-md-regular-font-family);
+  font-size: var(--text-text-md-regular-font-size);
+  font-style: var(--text-text-md-regular-font-style);
+  font-weight: var(--text-text-md-regular-font-weight);
+  letter-spacing: var(--text-text-md-regular-letter-spacing);
+  line-height: var(--text-text-md-regular-line-height);
+  white-space: nowrap;
+}
+
+.input .div-2.state-3-filled .text-wrapper-2 {
+  font-family: var(--text-text-sm-regular-font-family);
+  font-size: var(--text-text-sm-regular-font-size);
+  font-style: var(--text-text-sm-regular-font-style);
+  font-weight: var(--text-text-sm-regular-font-weight);
+  letter-spacing: var(--text-text-sm-regular-letter-spacing);
+  line-height: var(--text-text-sm-regular-line-height);
+}
+
+.input .div-2.state-3-error-while-filled .text-wrapper-2 {
+  font-family: var(--text-text-sm-regular-font-family);
+  font-size: var(--text-text-sm-regular-font-size);
+  font-style: var(--text-text-sm-regular-font-style);
+  font-weight: var(--text-text-sm-regular-font-weight);
+  letter-spacing: var(--text-text-sm-regular-letter-spacing);
+  line-height: var(--text-text-sm-regular-line-height);
+}
+
+.input .div-2.type-2-drop-down-menu .value-3 {
+  flex: 1;
+}
+
+.input .div-2.type-2-password .value-3 {
+  width: fit-content;
+}
+
+.input .div-2.type-2-generic .value-3 {
+  flex: 1;
+}
+
+.input .div-2.type-2-drop-down-menu .key-2 {
+  color: var(--zinc-400);
+}
+
+.input .div-2.type-2-date-picker .key-2 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  color: var(--zinc-700);
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input .div-2.type-2-URL .key-2 {
+  color: var(--zinc-400);
+}
+
+.input .div-2.type-2-password .key-2 {
+  color: var(--zinc-400);
+}
+
+.input .div-2.type-2-generic .key-2 {
+  color: var(--zinc-400);
+}
+
+.input .div-2.type-2-with-dynamic-text .key-2 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  color: var(--zinc-700);
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input .div-2.type-2-local-phone-number .key-2 {
+  color: var(--zinc-400);
+}
+
+.input .div-2.type-2-drop-down-menu .value-4 {
+  color: var(--zinc-700);
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+}
+
+.input .div-2.type-2-date-picker .value-4 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  color: var(--zinc-700);
+  display: -webkit-box;
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input .div-2.type-2-URL .value-4 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  color: var(--zinc-700);
+  display: -webkit-box;
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input .div-2.type-2-password .value-4 {
+  color: var(--zinc-700);
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+}
+
+.input .div-2.type-2-generic .value-4 {
+  color: var(--zinc-700);
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+}
+
+.input .div-2.type-2-with-dynamic-text .value-4 {
+  color: var(--zinc-500);
+  font-family: var(--text-text-sm-regular-font-family);
+  font-size: var(--text-text-sm-regular-font-size);
+  font-style: var(--text-text-sm-regular-font-style);
+  font-weight: var(--text-text-sm-regular-font-weight);
+  letter-spacing: var(--text-text-sm-regular-letter-spacing);
+  line-height: var(--text-text-sm-regular-line-height);
+}
+
+.input .div-2.type-2-local-phone-number .value-4 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  color: var(--zinc-700);
+  display: -webkit-box;
+  font-family: var(--text-text-sm-semibold-font-family);
+  font-size: var(--text-text-sm-semibold-font-size);
+  font-style: var(--text-text-sm-semibold-font-style);
+  font-weight: var(--text-text-sm-semibold-font-weight);
+  letter-spacing: var(--text-text-sm-semibold-letter-spacing);
+  line-height: var(--text-text-sm-semibold-line-height);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
