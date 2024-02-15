@@ -18,7 +18,11 @@ var transport = nodemailer.createTransport({
       user: "4a36feac0c4e8d",
       pass: "0443acf3e0126e"
     }
-  });
+});
+
+
+
+
 const uploads = multer({dest: __dirname + "/uploads"})
 
 const https = require('https');

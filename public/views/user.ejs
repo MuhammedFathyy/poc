@@ -3830,6 +3830,26 @@
             color: var(--gray-300, #d1d5db)
         }
 
+        .button {
+    min-height: 48px;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 12px;
+    border: 1px solid var(--orange-600, #ea580c);
+    background: var(--Brand, #ef6701);
+    color: #fff;
+    margin-top: 8px;
+}
+
         .contact .overlap-wrapper {
             height: 422px;
             left: 690px;
@@ -5535,7 +5555,7 @@
                 </nav>
                 <div class="header-frame">
                     <p><%= name %></p>
-                    <a href="/download-pdf/<%= userId %>">Download file</button>
+                    <a class="button" href="/download-pdf/<%= userId %>">Download file</a>
                     <form action="/approve/<%= id %>" method="post">
                         <p><button class="submit-btn">Approve</button></p>
                     </form>
