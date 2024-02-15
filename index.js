@@ -10,20 +10,20 @@ const nodemailer = require('nodemailer');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json({limit:1024*1024*10, type:'application/json'}))
+app.use(bodyParser.json({ limit: 1024 * 1024 * 10, type: 'application/json' }))
 var transport = nodemailer.createTransport({
     host: "sandbox.smtp.mailtrap.io",
     port: 2525,
     auth: {
-      user: "4a36feac0c4e8d",
-      pass: "0443acf3e0126e"
+        user: "4a36feac0c4e8d",
+        pass: "0443acf3e0126e"
     }
 });
 
 
 
 
-const uploads = multer({dest: __dirname + "/uploads"})
+const uploads = multer({ dest: __dirname + "/uploads" })
 
 const https = require('https');
 let keycloakId;
@@ -31,36 +31,31 @@ const path = require('path');
 
 // set static directories
 app.use(express.static(path.join(__dirname, 'public')));
-const mongoose = require('mongoose');
 const User = require('./models/User');
-mongoose
-.connect('mongodb+srv://admin:5260069Mido@cluster0.nooe2kh.mongodb.net/POCDEV?retryWrites=true&w=majority')
-.then(() => console.log("connected"))
-mongoose.set("strictQuery", false)
 
 app.get('/', (req, res) => {
     keycloakId = req.query.id;
-    res.render(path.join(__dirname+ '/public/views/index.ejs'));
+    res.render(path.join(__dirname + '/public/views/index.ejs'));
 });
 
 app.post('/submit', async (req, res) => {
-    console.log(keycloakId)
-   const user = await User.create(req.body);
-   await transport.sendMail({
+    //console.log(req.query.id)
+    const userFiles = await User.insertUserData(req.body.file1, req.body.file2, req.body.file3 , 1);
+    await transport.sendMail({
         from: "Open Test",
         to: "test@test.com",
         subject: "testing",
-        html: `
-        <h1>A new user with name ${user.name}</h1>
-        <a href="http://localhost:3000/view-user/${user.id}/${keycloakId}">View User</a>
-        `
-   })
+        // html: `
+        // <h1>A new user with name ${req.query.name}</h1>
+        // <a href="http://localhost:3000/view-user/${user.id}/${keycloakId}">View User</a>
+        // `
+    })
 
-  res.redirect("https://apic-nonpr-459450ca-portal-web-cp4i-nonprod.apps.nt-non-ocp.neotek.sa/mfa-developer-portal/test-cat/");
+    res.redirect("https://apic-nonpr-459450ca-portal-web-cp4i-nonprod.apps.nt-non-ocp.neotek.sa/mfa-developer-portal/test-cat/");
 })
 
 app.get('/download-pdf/:userId', async (req, res) => {
-    const user = await User.findOne({_id: req.params.userId});
+    const user = await User.findOne({ _id: req.params.userId });
     // Decode Base64 string to binary data
     const pdfBuffer = Buffer.from(user.file, 'base64');
 
@@ -72,25 +67,30 @@ app.get('/download-pdf/:userId', async (req, res) => {
     res.send(pdfBuffer);
 });
 
-
-app.get("/view-user/:id/:keycloakId", async (req, res) => {
-    const user = await User.findOne({_id: req.params.id});
-    const name = user.name;
-    const userId = user.id;
-    res.render(path.join(__dirname+ '/public/views/user.ejs'), {name:name, id: req.params.keycloakId, userId: userId});
+app.put("/update-user/:keycloakId" , async (req , res) => {
+    console.log(req.params.keycloakId);
+    await User.updateRevokeReason(req.params.keycloakId , req.body.revokeReason);
+    res.status(200).json({Message : "User Revoke Reason is updated Successfully"});
+})
+app.get("/view-user/:keycloakId", async (req, res) => {
+    console.log(req.params.keycloakId);
+    const userFiles = await User.findByID(req.params.keycloakId);
+    //const name = user.name;
+    //const userId = user.id;
+    //res.render(path.join(__dirname + '/public/views/user.ejs'), { name: name, id: req.params.keycloakId, userId: userId });
 })
 
 app.post("/approve/:id", async (req, res) => {
     const token = await getAdminToken();
     approve(req.params.id, token);
-    res.render(path.join(__dirname+ '/public/views/index.ejs'));
+    res.render(path.join(__dirname + '/public/views/index.ejs'));
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`Example app listening at http://localhost:${port}`);
 });
 
-const agent = new https.Agent({  
+const agent = new https.Agent({
     rejectUnauthorized: false
 });
 async function getAdminToken() {
