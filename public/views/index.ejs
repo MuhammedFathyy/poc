@@ -5530,8 +5530,7 @@
         <div class="home">
             <div class="div-2">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light landing-page-header responsive-nav-bar ">
-                    <div class="container-fluid"><img src="../Logo (1).png"
-                            alt="logo" class="logo"/></div>
+                    <div class="container-fluid"><img src="../Logo (1).png" alt="logo" class="logo" /></div>
                 </nav>
                 <div class="header-frame">
                     <h1>تواصل معنا</h1>
@@ -5540,13 +5539,21 @@
                 <form class="form-frame-wrapper" id="fileForm" method="POST">
                     <div class="row frame-3">
                         <div class="row">
-                            <div class="col-md-6">
-                                <div><input type="text" placeholder="الاسم الاول" class="input " name="name" id="name"
-                                        value=""></div>
+                            <div class="col-md-12">
+                                <div><input type="file" accept="pdf/*" size="60" style="margin-top: 15px;" name="file1"
+                                        id="fileInput1" required></div>
                             </div>
-                            <div class="col-md-6">
-                                <div><input type="file" accept="pdf/*"size="60" style="margin-top: 15px;" name="file" id="fileInput"
-                                        value=""></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div><input type="file" accept="pdf/*" size="60" style="margin-top: 15px;" name="file2"
+                                        id="fileInput2" required></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div><input type="file" accept="pdf/*" size="60" style="margin-top: 15px;" name="file3"
+                                        id="fileInput3" required></div>
                             </div>
                         </div>
                         <div class="row">
@@ -5600,16 +5607,13 @@
                                 <div class="text-wrapper thin-true xs element-text-line-2">يسمح البنك المركزي السعودي
                                     لشركة نيوتك باختبار خدماتها المبتكرة في ظل بيئة الحماية التنظيمية.</div>
                             </div>
-                            <div class="frame"><img class="frame-2" alt="Frame"
-                                    src="../frame-1.png">
+                            <div class="frame"><img class="frame-2" alt="Frame" src="../frame-1.png">
                                 <div class="ellipse"></div><img class="logo-horiz" alt="Logo horiz"
                                     src="../logo-horiz-2-1.png">
                             </div>
                         </div>
-                        <div class="social-links"><img alt="Frame"
-                                src="../TwitterX (1).png"><img alt="Frame"
-                                src="../Instagram.png"><img alt="Frame"
-                                src="../LinkedIn.png"><img alt="Frame"
+                        <div class="social-links"><img alt="Frame" src="../TwitterX (1).png"><img alt="Frame"
+                                src="../Instagram.png"><img alt="Frame" src="../LinkedIn.png"><img alt="Frame"
                                 src="data:image/png;base64,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"
                                 style="width: 45px;"></div>
                     </div>
@@ -5632,43 +5636,48 @@
         crossorigin="anonymous"></script>
 
 
-        <script>
-            document.getElementById('fileForm').addEventListener('submit', async function(event) {
-                event.preventDefault();
-                const fileInput = document.getElementById('fileInput');
-                const file = fileInput.files[0];
-          
-                if (file) {
+    <script>
+        document.getElementById('fileForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const fileInput1 = document.getElementById('fileInput1');
+            const fileInput2 = document.getElementById('fileInput2');
+            const fileInput3 = document.getElementById('fileInput3');
+            const files = [fileInput1.files[0], fileInput2.files[0], fileInput3.files[0]];
+
+            if (files.length === 3) {
+                const filesData = [];
+                for (let file of files) {
                     const reader = new FileReader();
-          
-                    reader.onload = function() {
-                      const name = document.getElementById('name').value;
-                        const file = reader.result.split(',')[1];
-                        uploadFile(file, name);
+                    reader.onload = function () {
+                        file = reader.result.split(',')[1];
+                        filesData.push(file);
+                        if (filesData.length === files.length) {
+                            uploadFiles(filesData[0], filesData[1], filesData[2]);
+                        }
                     };
-          
                     reader.readAsDataURL(file);
-                } else {
-                    alert('Please select a file.');
                 }
-            });
-          
-            async function uploadFile(file, name) {
-                try {
-                    const response = await fetch('/submit', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ file, name })
-                    });
-          
-                    const data = await response.json();
-                } catch (error) {
-                    console.error('Error:', error);
-                }
+            } else {
+                alert('Please select a file.');
             }
-          </script>
+        });
+
+        async function uploadFiles(file1, file2, file3) {
+            try {
+                const response = await fetch('/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ file1, file2, file3 })
+                });
+                const data = await response.json();
+                console.log(data);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    </script>
 
 
 </body>
