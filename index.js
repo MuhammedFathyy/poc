@@ -43,7 +43,6 @@ app.get('/', (req, res) => {
 app.post('/submit', async (req, res) => {
     //console.log(req.query.id)
     const userFiles = await User.insertUserData(req.body.file1, req.body.file2, req.body.file3 , 1);//, req.query.id);
-    console.log("hii");
     // await transport.sendMail({
     //     from: "Open Test",
     //     to: "test@test.com",
