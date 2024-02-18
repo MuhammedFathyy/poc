@@ -19,6 +19,8 @@ var transport = nodemailer.createTransport({
         pass: "0443acf3e0126e"
     }
 });
+var cors = require('cors');
+app.use(cors());
 
 
 
@@ -40,18 +42,20 @@ app.get('/', (req, res) => {
 
 app.post('/submit', async (req, res) => {
     //console.log(req.query.id)
-    const userFiles = await User.insertUserData(req.body.file1, req.body.file2, req.body.file3 , 1);
-    await transport.sendMail({
-        from: "Open Test",
-        to: "test@test.com",
-        subject: "testing",
-        // html: `
-        // <h1>A new user with name ${req.query.name}</h1>
-        // <a href="http://localhost:3000/view-user/${user.id}/${keycloakId}">View User</a>
-        // `
-    })
+    const userFiles = await User.insertUserData(req.body.file1, req.body.file2, req.body.file3 , 1);//, req.query.id);
+    console.log("hii");
+    // await transport.sendMail({
+    //     from: "Open Test",
+    //     to: "test@test.com",
+    //     subject: "testing",
+    //     // html: `
+    //     // <h1>A new user with name ${req.query.name}</h1>
+    //     // <a href="http://localhost:3000/view-user/${user.id}/${keycloakId}">View User</a>
+    //     // `
+    // })
 
-    res.redirect("https://apic-nonpr-459450ca-portal-web-cp4i-nonprod.apps.nt-non-ocp.neotek.sa/mfa-developer-portal/test-cat/");
+    //res.redirect("https://apic-nonpr-459450ca-portal-web-cp4i-nonprod.apps.nt-non-ocp.neotek.sa/mfa-developer-portal/test-cat/");
+    res.json({ success: true });
 })
 
 app.get('/download-pdf/:userId', async (req, res) => {
@@ -67,14 +71,15 @@ app.get('/download-pdf/:userId', async (req, res) => {
     res.send(pdfBuffer);
 });
 
-app.put("/update-user/:keycloakId" , async (req , res) => {
+app.put("/update-user/:keycloakId", async (req, res) => {
     console.log(req.params.keycloakId);
-    await User.updateRevokeReason(req.params.keycloakId , req.body.revokeReason);
-    res.status(200).json({Message : "User Revoke Reason is updated Successfully"});
+    await User.updateRevokeReason(req.params.keycloakId, req.body.revokeReason);
+    res.status(200).json({ Message: "User Revoke Reason is updated Successfully" });
 })
 app.get("/view-user/:keycloakId", async (req, res) => {
     console.log(req.params.keycloakId);
     const userFiles = await User.findByID(req.params.keycloakId);
+    res.json({ data: userFiles })
     //const name = user.name;
     //const userId = user.id;
     //res.render(path.join(__dirname + '/public/views/user.ejs'), { name: name, id: req.params.keycloakId, userId: userId });

@@ -5664,15 +5664,18 @@
 
         async function uploadFiles(file1, file2, file3) {
             try {
-                const response = await fetch('/submit', {
+                await fetch('/submit', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({ file1, file2, file3 })
-                });
-                const data = await response.json();
-                console.log(data);
+                })
+                .then(response =>{
+                    if(response.ok){
+                        window.location.href = 'http://www.google.com';
+                    }
+                });                
             } catch (error) {
                 console.error('Error:', error);
             }
