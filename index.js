@@ -15,8 +15,8 @@ var transport = nodemailer.createTransport({
     host: "sandbox.smtp.mailtrap.io",
     port: 2525,
     auth: {
-        user: "4a36feac0c4e8d",
-        pass: "0443acf3e0126e"
+        user: "7da807abf7bd67",
+        pass: "42d4e4a3cc34a7"
     }
 });
 var cors = require('cors');
@@ -41,8 +41,8 @@ app.get('/', (req, res) => {
 });
 
 app.post('/submit', async (req, res) => {
-    //console.log(req.query.id)
-    const userFiles = await User.insertUserData(req.body.file1, req.body.file2, req.body.file3 , 1);//, req.query.id);
+    console.log(req.query.keycloakId);
+    const userFiles = await User.insertUserData(req.body.file1, req.body.file2, req.body.file3, req.query.keycloakId);
     // await transport.sendMail({
     //     from: "Open Test",
     //     to: "test@test.com",
@@ -72,8 +72,18 @@ app.get('/download-pdf/:userId', async (req, res) => {
 
 app.put("/update-user/:keycloakId", async (req, res) => {
     console.log(req.params.keycloakId);
-    await User.updateRevokeReason(req.params.keycloakId, req.body.revokeReason);
-    res.status(200).json({ Message: "User Revoke Reason is updated Successfully" });
+    console.log(req.query.email);
+    await User.updateUserData(req.params.keycloakId , req.body);
+    // await transport.sendMail({
+    //     from: "Open Test",
+    //     to: req.params.email,
+    //     subject: "testing",
+    //     // html: `
+    //     // <h1>A new user with name ${req.query.name}</h1>
+    //     // <a href="http://localhost:3000/view-user/${user.id}/${keycloakId}">View User</a>
+    //     // `
+    // })
+    res.status(200).json({ Message: "User Revoke Reason is updated Successfully" , email : req.query.email , id : req.params.keycloakId});
 })
 app.get("/view-user/:keycloakId", async (req, res) => {
     console.log(req.params.keycloakId);
