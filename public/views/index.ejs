@@ -22,6 +22,12 @@
             -webkit-font-smoothing: antialiased;
             box-sizing: border-box;
         }
+        
+        button.submit-btn:disabled {
+            background-color: lightgray; /* Change to the desired color */
+            color: darkgray; /* Change to the desired text color */
+            cursor: not-allowed; /* Change cursor to not-allowed */
+        }
 
         html,
         body {
@@ -5639,11 +5645,11 @@
     <script>
         document.getElementById('fileForm').addEventListener('submit', async function (event) {
             event.preventDefault();
+            document.querySelector(".submit-btn").disabled= true;
             const fileInput1 = document.getElementById('fileInput1');
             const fileInput2 = document.getElementById('fileInput2');
             const fileInput3 = document.getElementById('fileInput3');
             const files = [fileInput1.files[0], fileInput2.files[0], fileInput3.files[0]];
-
             if (files.length === 3) {
                 const filesData = [];
                 for (let file of files) {
@@ -5661,10 +5667,9 @@
                 alert('Please select a file.');
             }
         });
-
         async function uploadFiles(file1, file2, file3) {
             try {
-                await fetch('/submit', {
+                await fetch('/submit?keycloakId=', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -5673,9 +5678,9 @@
                 })
                 .then(response =>{
                     if(response.ok){
-                        window.location.href = 'http://www.google.com';
+                        //window.location.href = 'http://www.google.com';
                     }
-                });                
+                });             
             } catch (error) {
                 console.error('Error:', error);
             }
