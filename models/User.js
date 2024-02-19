@@ -14,8 +14,8 @@ client.connect()
 async function insertUserData(file1, file2, file3 , keyCloakID) {
     try {
         const query = {
-            text: 'INSERT INTO "users" (file1, file2, file3 , keyCloakID) VALUES ($1, $2, $3 , $4) RETURNING *',
-            values: [file1, file2, file3 , keyCloakID]
+            text: 'INSERT INTO "users" (keycloakid, file1, file2, file3) VALUES ($1, $2, $3, $4) ON CONFLICT (keycloakid) DO UPDATE SET file1 = $2, file2 = $3, file3 = $4 RETURNING *',
+            values: [keyCloakID ,file1, file2, file3]
         };
         const insertedUser = await client.query(query);
         return insertedUser.rows[0];
@@ -39,11 +39,16 @@ async function findByID(keyCloakID){
         throw error;
     }
 }
-async function updateRevokeReason(keyCloakID , revokeReason){
+async function updateUserData(keyCloakID ,reqBody){
     try{
+        const setFields = Object.entries(reqBody)
+        .map(([key, value], index) => `${key} = $${index + 1}`)
+        .join(', ');
+        const values = Object.values(reqBody);
+
         const query = {
-            text: 'UPDATE users u SET revokeReason = $1 WHERE keyCloakID = $2',
-            values: [revokeReason , keyCloakID]
+            text: `UPDATE users SET ${setFields} WHERE keyCloakID = $${Object.keys(reqBody).length + 1}`,
+            values: [...values, keyCloakID]
         }
         const updatedUser = await client.query(query);
         return updatedUser.rows[0];
@@ -55,5 +60,5 @@ async function updateRevokeReason(keyCloakID , revokeReason){
 module.exports = {
     insertUserData,
     findByID,
-    updateRevokeReason
+    updateUserData
 };
